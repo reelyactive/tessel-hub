@@ -1,0 +1,28 @@
+{
+  "name": "tessel-hub",
+  "version": "0.1.0",
+  "description": "Enterprise-grade hub software for the Tessel 2 platform. We believe in an open Internet of Things.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reelyactive/tessel-hub.git"
+  },
+  "keywords": [
+    "reelyActive",
+    "Tessel",
+    "Hub",
+    "IoT",
+    "RTLS"
+  ],
+  "dependencies": {
+    "barnowl": "0.4.21",
+    "reelib": ">=0.0.14"
+  },
+  "contributors": [
+    { "name": "Jeffrey Dungen" }
+  ],
+  "license": "MIT"
+}
