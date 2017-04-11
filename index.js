@@ -1,13 +1,26 @@
 /*
- * Copyright reelyActive 2016
+ * Copyright reelyActive 2016-2017
  * We believe in an open Internet of Things
  */
 
 var tessel = require('tessel');
+var http = require('http');
+var express = require('express');
 var barnowl = require('barnowl');
 var reelib = require('reelib');
 var uartListener = require('./uartListener');
 
+// Create the Express app, server and router
+var app = express();
+var server = http.createServer(app);
+var router = express.Router();
+
+// Define the Express routes
+app.use('/', express.static(__dirname + '/web'));
+app.use('/', router);
+
+// Listen on port 80
+server.listen(80, function() { console.log('Express server running'); });
 
 // User-configurable: hostname and port
 var options = { hostname: 'pareto.reelyactive.com', port: 80 };

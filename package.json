@@ -1,6 +1,6 @@
 {
   "name": "tessel-hub",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Enterprise-grade hub software for the Tessel 2 platform. We believe in an open Internet of Things.",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,8 @@
     "RTLS"
   ],
   "dependencies": {
-    "barnowl": "0.4.21",
+    "express": ">=4.0.0",
+    "barnowl": ">=0.4.23",
     "reelib": ">=0.0.14"
   },
   "contributors": [
