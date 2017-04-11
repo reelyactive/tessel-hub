@@ -11,7 +11,7 @@ The reel streams data at 230400bps while the Tessel 2's default firmware is (art
 
     t2 provision
     t2 root
-    vi /usr/local/node/tessel-exports.js
+    vi /usr/lib/node/tessel-exports.js
 
-Change 115200 to 230400 (around line 1000), then save and exit.
+Change 115200 to 230400 (around line 1055), then save and exit.
 
