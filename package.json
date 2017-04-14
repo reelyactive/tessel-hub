@@ -1,6 +1,6 @@
 {
   "name": "tessel-hub",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Enterprise-grade hub software for the Tessel 2 platform. We believe in an open Internet of Things.",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "express": ">=4.0.0",
-    "reelay": ">=0.1.0"
+    "reelay": ">=0.1.1"
   },
   "contributors": [
     { "name": "Jeffrey Dungen" }
