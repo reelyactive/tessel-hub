@@ -28,7 +28,9 @@ function UARTListener(port) {
   events.EventEmitter.call(this);
 
   self.uart.on('data', function (data) {
+    tessel.led[2].on();
     self.emit('data', data.toString('hex'), self.origin);
+    tessel.led[2].off();
   });
 
 }
