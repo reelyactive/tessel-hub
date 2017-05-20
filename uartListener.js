@@ -1,13 +1,13 @@
 /*
- * Copyright reelyActive 2016
+ * Copyright reelyActive 2016-2017
  * We believe in an open Internet of Things
  */
 
-var tessel = require('tessel');
-var util = require('util');
-var events = require('events');
+const tessel = require('tessel');
+const util = require('util');
+const events = require('events');
 
-var REEL_BAUD_RATE = 230400;
+const REEL_BAUD_RATE = 230400;
 
 
 /**
@@ -27,6 +27,7 @@ function UARTListener(port) {
 
   events.EventEmitter.call(this);
 
+  // Emit UART data and pulse green LED
   self.uart.on('data', function (data) {
     tessel.led[2].on();
     self.emit('data', data.toString('hex'), self.origin);

@@ -3,11 +3,11 @@
  * We believe in an open Internet of Things
  */
 
-var tessel = require('tessel');
-var http = require('http');
-var express = require('express');
-var reelay = require('reelay');
-var uartListener = require('./uartListener');
+const tessel = require('tessel');
+const http = require('http');
+const express = require('express');
+const reelay = require('reelay');
+const uartListener = require('./uartListener');
 
 // Create the Express app, server and router
 var app = express();
@@ -18,10 +18,10 @@ var router = express.Router();
 app.use('/', express.static(__dirname + '/web'));
 app.use('/', router);
 
-// Listen on port 80
+// Listen on port 80 to serve the webpage
 server.listen(80, function() { console.log('Express server running'); });
 
-// Listen on UART (Port A) and bind barnowl to the data stream
+// Listen on UART (Port A) and generate events from the data stream
 var uart = new uartListener('A');
 
 // Enable the relay
