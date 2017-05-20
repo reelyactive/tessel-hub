@@ -7,6 +7,7 @@ const tessel = require('tessel');
 const http = require('http');
 const express = require('express');
 const reelay = require('reelay');
+const config = require('./config');
 const uartListener = require('./uartListener');
 
 // Create the Express app, server and router
@@ -27,8 +28,8 @@ var uart = new uartListener('A');
 // Enable the relay
 var relay = new reelay();
 relay.addListener( { protocol: 'event', path: uart, enableMixing: false } );
-relay.addForwarder( { protocol: 'udp', port: 50000,
-                      address: 'pareto.reelyactive.com' } );
+relay.addForwarder( { protocol: 'udp', port: config.targetPort,
+                      address: config.targetAddress } );
 
 // Blue LED continuously toggles to indicate program is running
 setInterval(function() { tessel.led[3].toggle(); }, 500);
