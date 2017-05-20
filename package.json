@@ -1,7 +1,7 @@
 {
   "name": "tessel-hub",
-  "version": "0.3.2",
-  "description": "Enterprise-grade hub software for the Tessel 2 platform. We believe in an open Internet of Things.",
+  "version": "0.3.3",
+  "description": "Reel data forwarder for the Tessel 2 platform. We believe in an open Internet of Things.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
