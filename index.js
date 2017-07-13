@@ -28,8 +28,13 @@ var uart = new uartListener('A');
 // Enable the relay
 var relay = new reelay();
 relay.addListener( { protocol: 'event', path: uart, enableMixing: false } );
-relay.addForwarder( { protocol: 'udp', port: config.targetPort,
-                      address: config.targetAddress } );
+relay.addForwarder({
+  protocol: 'udp',
+  port: config.targetPort,
+  address: config.targetAddress,
+  maxPayloadBytes: config.maxPayloadBytes,
+  maxDelayMilliseconds: config.maxDelayMilliseconds
+});
 
 // Blue LED continuously toggles to indicate program is running
 setInterval(function() { tessel.led[3].toggle(); }, 500);
