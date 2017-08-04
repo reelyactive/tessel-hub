@@ -1,6 +1,6 @@
 {
   "name": "tessel-hub",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Reel data forwarder for the Tessel 2 platform. We believe in an open Internet of Things.",
   "main": "index.js",
   "scripts": {
