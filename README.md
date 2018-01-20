@@ -49,7 +49,7 @@ The Tessel 2's default firmware is (artificially) limited to 115200bps, however,
     t2 root
     vi /usr/lib/node/tessel-exports.js
 
-Change 115200 to 230400 (around line 1055), then save and exit.
+Change 115200 to 230400 (line 1188 in firmware v0.1.0), then save and exit.
 
 
 License
